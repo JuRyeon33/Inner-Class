@@ -7,7 +7,15 @@ public class Outer {
             System.out.println("Inner says : " + message);
         }
     }
-    public static void main(String[] args) {
 
+    public void callInner() {
+        InnerClass inner = new InnerClass();
+        inner.displayMessage();
+    }
+
+    public static void main(String[] args) {
+        Outer outer = new Outer();
+
+        outer.callInner();
     }
 }
